@@ -62,6 +62,24 @@ python end2end.py \
     --output output_i2i.png
 ```
 
+### Minimal Image Editing Example
+
+For a concise edit-mode example with only the required arguments:
+
+```bash
+python minimal_edit.py \
+    --model-path zai-org/GLM-Image \
+    --image input.png \
+    --prompt "Turn this into a watercolor painting" \
+    --output output_glm_edit.png
+```
+
+Or use the helper script:
+
+```bash
+./run_minimal_i2i.sh /path/to/input.png
+```
+
 ### With Custom Parameters
 
 ```bash
@@ -153,4 +171,12 @@ The first run loads model weights. Subsequent runs are faster:
 ??? abstract "run_t2i.sh"
     ``````sh
     --8<-- "examples/offline_inference/glm_image/run_t2i.sh"
+    ``````
+??? abstract "minimal_edit.py"
+    ``````py
+    --8<-- "examples/offline_inference/glm_image/minimal_edit.py"
+    ``````
+??? abstract "run_minimal_i2i.sh"
+    ``````sh
+    --8<-- "examples/offline_inference/glm_image/run_minimal_i2i.sh"
     ``````
